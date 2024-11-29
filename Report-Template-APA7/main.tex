@@ -1,0 +1,140 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage[page,toc,titletoc,title]{appendix}
+\usepackage{kantlipsum} % For placeholder text
+\usepackage{csquotes}                                         % For inline and 
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}       % Hyper-references in PDF (e.g. urlcolor=blue)
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{csquotes} 
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{bibliography.bib}
+\usepackage[T1]{fontenc} 
+\usepackage{amsmath}
+% \usepackage{mathptmx}  % For Times New Roman
+\geometry{left=1in, right=1in, top=1in, bottom=1in}
+\setstretch{1.5}
+
+\begin{document}
+\input{cover}
+% -------------------------------------------------------------
+% FRONTMATTER
+% -------------------------------------------------------------
+\pagenumbering{roman}
+\setcounter{page}{1}                                          % Start page counter
+
+\input{frontmatter}
+\tableofcontents                                         % Add table of contents
+
+\newpage
+
+\ % The empty page
+\thispagestyle{empty}
+\newpage
+% -------------------------------------------------------------
+% MAIN CONTENT
+% -------------------------------------------------------------
+% \chapter[Abstract]{This is the abstract}              % Short and long title versions
+% \label{chap:abs}                                            % Chapter label
+\pagenumbering{arabic}                                        % Change age 
+\setcounter{page}{1}                                          % Start page numbering to arabic
+% -------------------------------------------------------------
+% FORMATTING CHAPTER COMMANDS
+% -------------------------------------------------------------
+
+\titleformat{\chapter}[hang]
+{\normalfont\LARGE\bfseries}   % Style of chapter title
+{\thechapter.}                 % Chapter number format with a period (e.g., "2.")
+{1em}                          % Space between the number and title
+{}
+
+
+% -------------------------------------------------------------
+% CHAPTER
+% -------------------------------------------------------------
+\chapter{Abstract}                                           % Chapter title
+\label{chap:abs}                                         % Chapter label
+\kant[1]
+\textbf{Keywords:} Hustle culture, freshers, social media, academic pressures, burnout, mental health, productivity, peer comparison, institutional expectations, psychological impacts, self-perception
+
+% Fomatting stuff
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyhead[L]{\leftmark}
+\fancyfoot[C]{\thepage} % Page number at the center of the footer
+
+
+% -------------------------------------------------------------
+% CHAPTER
+% -------------------------------------------------------------
+\chapter[Introduction]{Introduction}              % Short and long title versions
+\label{chap:intro}
+\input{Chapter/Introduction.tex}                             % Call file with chapter
+
+% -------------------------------------------------------------
+% CHAPTER
+% -------------------------------------------------------------
+\chapter[Literature Review]{Literature Review}              % Short and long title versions
+\label{chap:lit}
+\input{Chapter/Literature.tex}                             % Call file with chapter
+
+
+% -------------------------------------------------------------
+% CHAPTER
+% -------------------------------------------------------------
+% \chapter[Problem Statement]{Problem Statement}              % Short and long title versions
+% \label{chap:ps}
+% \input{Chapter/ps.tex}                             % Call file with chapter
+
+% -------------------------------------------------------------
+% CHAPTER
+% -------------------------------------------------------------
+% \chapter[Objectives]{Objectives}              % Short and long title versions
+% \label{chap:obj}
+
+% -------------------------------------------------------------
+% CHAPTER
+% -------------------------------------------------------------
+% \chapter[Methodology]{Methodology}              % Short and long title versions
+% \label{chap:meth}
+% \input{Chapter/meth.tex}                             % Call file with chapter
+% -------------------------------------------------------------
+% CHAPTER
+% -------------------------------------------------------------
+% \chapter[Procedure]{Procedure}              % Short and long title versions
+% \label{chap:pc}
+% \input{Chapter/pc.tex}                             % Call file with chapter
+
+% -------------------------------------------------------------
+% CHAPTER
+% -------------------------------------------------------------
+\chapter[Analysis]{Analysis of Survey Results}              % Short and long title versions
+\label{chap:analysis}
+\input{Chapter/Analysis.tex}                             % Call file with chapter
+
+% -------------------------------------------------------------
+% CHAPTER
+% -------------------------------------------------------------
+% \chapter[Conclusion]{Conclusion}              % Short and long title versions
+% \label{chap:conc}
+% % \input{Chapter/conclusion.tex}                             % Call file with chapter
+
+% -------------------------------------------------------------
+% CHAPTER
+% -------------------------------------------------------------
+\label{chap:bibs}
+\printbibliography
+\addcontentsline{toc}{chapter}{Bibliography}
+
+% -------------------------------------------------------------
+% CHAPTER
+% -------------------------------------------------------------
+\appendix                                                     % Start appendices
+\chapter{Annexure 1: Notes from Kant}                          % Title of first appendix
+% \input{Chapter/survey.tex}                                 % Call file with 
+\kant[23-24]
+\end{document}
