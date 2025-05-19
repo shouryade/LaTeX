@@ -4,7 +4,7 @@ This repository contains LaTeX templates for various types of documents. The tem
 
 Description of the templates:
 
-1. **Report-Template-APA7**: A template for writing reports and using citations/references in APA 7th edition format. The template includes a cover page, front matter, and three chapters (Introduction, Literature Review, and Analysis). The template also includes a bibliography file and a sample image.[Template Example on Overleaf](https://www.overleaf.com/read/hgffmpdjrpbg#064d83)
+1. **Report-Template-APA7**: A template for writing reports and using citations/references in APA 7th edition format. The template includes a cover page, front matter, and three chapters (Introduction, Literature Review, and Analysis). The template also includes a bibliography file and a sample image. [Template Example on Overleaf](https://www.overleaf.com/read/hgffmpdjrpbg#064d83)
 
 ```nim
 ├── README.md
